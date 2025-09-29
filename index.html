@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Any Yogurt - Yogurt Artesanal con Sabor Real</title>
+    <meta name="description" content="Any Yogurt ofrece yogurt artesanal 100% natural, sin conservantes ni aditivos. Descubre nuestros deliciosos sabores hechos con ingredientes locales.">
+    <meta name="keywords" content="yogurt artesanal, yogurt natural, sin conservantes, ingredientes locales, saludable">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf logo-icon"></i>
+                <span class="logo-text">Any Yogurt</span>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#home" class="nav-link">Inicio</a>
+                <a href="#about" class="nav-link">Nosotros</a>
+                <a href="#products" class="nav-link">Productos</a>
+                <a href="#where-to-buy" class="nav-link">Comprar</a>
+                <a href="#testimonials" class="nav-link">Testimonios</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#contact" class="nav-link">Contacto</a>
+                <div class="cart-icon" onclick="toggleCart()">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cart-count">0</span>
+                </div>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">Yogurt Artesanal con Sabor Real</h1>
+                <p class="hero-subtitle">Elaborado con amor, ingredientes naturales y el mejor sabor que puedas imaginar. Sin conservantes, sin aditivos, solo lo mejor de la naturaleza.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('products')">Descubre Nuestros Sabores</button>
+                    <button class="btn-secondary" onclick="scrollToSection('where-to-buy')">Compra Ahora</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="imagen/logo.jpg" alt="Yogurt artesanal Any Yogurt en bowl con frutas frescas">
+            </div>
+        </div>
+        <div class="hero-features">
+            <div class="feature-item">
+                <i class="fas fa-leaf"></i>
+                <span>100% Natural</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-heart"></i>
+                <span>Hecho con Amor</span>
+            </div>
+            <div class="feature-item">
+                <i class="fas fa-seedling"></i>
+                <span>Ingredientes Locales</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestra Historia</h2>
+                <p>Una pasión convertida en tradición artesanal</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>El Arte de Hacer Yogurt</h3>
+                    <p>Any Yogurt nació de la pasión por crear productos auténticos que nutran el cuerpo y el alma. Desde nuestros inicios, nos hemos comprometido con un proceso artesanal que respeta tanto la tradición como la innovación.</p>
+                    
+                    <h4>Nuestro Proceso</h4>
+                    <ul>
+                        <li><strong>Selección rigurosa:</strong> Elegimos solo los mejores ingredientes locales</li>
+                        <li><strong>Fermentación natural:</strong> Respetamos los tiempos de la naturaleza</li>
+                        <li><strong>Sin aditivos:</strong> Cero conservantes, cero colorantes artificiales</li>
+                        <li><strong>Control de calidad:</strong> Cada lote es probado y aprobado</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.pexels.com/photos/4198880/pexels-photo-4198880.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Proceso artesanal de elaboración de yogurt">
+                </div>
+            </div>
+            
+            <div class="differentiators">
+                <div class="diff-item">
+                    <i class="fas fa-award"></i>
+                    <h4>Calidad Premium</h4>
+                    <p>Ingredientes seleccionados y proceso artesanal garantizan la mejor calidad</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-globe-americas"></i>
+                    <h4>Sostenibilidad</h4>
+                    <p>Envases eco-friendly y apoyo a productores locales</p>
+                </div>
+                <div class="diff-item">
+                    <i class="fas fa-microscope"></i>
+                    <h4>Sin Aditivos</h4>
+                    <p>Libre de conservantes, colorantes y saborizantes artificiales</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="products">
+        <div class="container">
+            <div class="section-header">
+                <h2>Nuestros Sabores</h2>
+                <p>Una experiencia única en cada cucharada</p>
+            </div>
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be loaded by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Where to Buy Section -->
+    <section id="where-to-buy" class="where-to-buy">
+        <div class="container">
+            <div class="section-header">
+                <h2>¿Dónde Comprar?</h2>
+                <p>Encuentra Any Yogurt cerca de ti</p>
+            </div>
+            
+            <div class="buy-options">
+                <div class="buy-option">
+                    <h3>Compra Online</h3>
+                    <p>Recibe nuestros productos frescos directamente en tu hogar</p>
+                    <div class="payment-methods">
+                        <h4>Métodos de Pago:</h4>
+                        <div class="payment-icons">
+                            <i class="fas fa-credit-card" title="Tarjetas de Crédito/Débito"></i>
+                            <i class="fas fa-university" title="Transferencia Bancaria"></i>
+                            <i class="fas fa-mobile-alt" title="Pago Móvil"></i>
+                        </div>
+                    </div>
+                    <div class="shipping-options">
+                        <h4>Opciones de Entrega:</h4>
+                        <ul>
+                            <li>Envío a domicilio (24-48 hrs)</li>
+                            <li>Recolección en punto de venta</li>
+                            <li>Envío gratuito en compras >$50</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="buy-option">
+                    <h3>Tiendas Físicas</h3>
+                    <p>Visita nuestros puntos de venta autorizados</p>
+                    <div class="store-list">
+                        <div class="store-item">
+                            <h4>Supermercado Central</h4>
+                            <p>Av. Principal, Centro Comercial Plaza</p>
+                        </div>
+                        <div class="store-item">
+                            <h4>Mercado Orgánico Verde</h4>
+                            <p>Calle 5ta, Sector Los Álamos</p>
+                        </div>
+                        <div class="store-item">
+                            <h4>Tienda Naturista Vida Sana</h4>
+                            <p>Av. Libertador, C.C. El Recreo</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <h2>Lo Que Dicen Nuestros Clientes</h2>
+                <p>Experiencias reales de personas reales</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"El mejor yogurt que he probado. Se nota la diferencia en calidad y sabor. Mis hijos lo aman y yo me siento tranquila sabiendo que es 100% natural."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="María González">
+                            <div>
+                                <strong>María González</strong>
+                                <span>Madre de familia</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"Como nutricionista, recomiendo Any Yogurt a mis pacientes. Es el único yogurt que conozco verdaderamente artesanal y sin aditivos."</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Dr. Carlos Mendez">
+                            <div>
+                                <strong>Dr. Carlos Méndez</strong>
+                                <span>Nutricionista</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-item">
+                    <div class="testimonial-content">
+                        <p>"Llevo más de un año consumiendo Any Yogurt. La textura cremosa y los sabores naturales son incomparables. ¡No cambio por nada!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1036623/pexels-photo-1036623.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&fit=crop" alt="Ana Silva">
+                            <div>
+                                <strong>Ana Silva</strong>
+                                <span>Cliente frecuente</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog">
+        <div class="container">
+            <div class="section-header">
+                <h2>Recetas y Más</h2>
+                <p>Descubre nuevas formas de disfrutar tu yogurt</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-post">
+                    <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Bowl de yogurt con frutas">
+                    <div class="blog-content">
+                        <h3>5 Desayunos Saludables con Yogurt</h3>
+                        <p>Comienza tu día con energía y nutrición. Descubre estas deliciosas combinaciones que harán de tu desayuno el mejor momento del día.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                
+                <article class="blog-post">
+                    <img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Smoothie de yogurt">
+                    <div class="blog-content">
+                        <h3>Smoothies Perfectos para el Verano</h3>
+                        <p>Refréscate con estos smoothies cremosos y nutritivos. Ideales para después del ejercicio o como merienda saludable.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+                
+                <article class="blog-post">
+                    <img src="https://images.pexels.com/photos/1126728/pexels-photo-1126728.jpeg?auto=compress&cs=tinysrgb&w=400" alt="Postre con yogurt">
+                    <div class="blog-content">
+                        <h3>Postres Saludables sin Culpa</h3>
+                        <p>¿Quién dice que los postres no pueden ser saludables? Estas recetas te demostrarán que puedes cuidarte sin renunciar al placer.</p>
+                        <a href="#" class="read-more">Leer más</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contacto</h2>
+                <p>¿Tienes preguntas? ¡Estamos aquí para ayudarte!</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Habla con Nosotros</h3>
+                    <div class="contact-methods">
+                        <a href="https://wa.me/584120720391" class="contact-method whatsapp" target="_blank">
+                            <i class="fab fa-whatsapp"></i>
+                            <div>
+                                <strong>WhatsApp</strong>
+                                <span>0412-0720391</span>
+                            </div>
+                        </a>
+                        <a href="https://www.instagram.com/anyyogurt" class="contact-method instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                            <div>
+                                <strong>Instagram</strong>
+                                <span>@anyyogurt</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <h3>Envíanos un Mensaje</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Tu mensaje" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf logo-icon"></i>
+                        <span class="logo-text">Any Yogurt</span>
+                    </div>
+                    <p>Yogurt artesanal con sabor real. Elaborado con amor e ingredientes naturales para nutrir tu cuerpo y alma.</p>
+                    <div class="certifications">
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>Sin Conservantes</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-leaf"></i>
+                            <span>100% Natural</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-recycle"></i>
+                            <span>Eco-Friendly</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#about">Nosotros</a></li>
+                        <li><a href="#products">Productos</a></li>
+                        <li><a href="#where-to-buy">Comprar</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/anyyogurt" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://wa.me/584120720391" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Newsletter</h4>
+                    <p>Recibe noticias, ofertas y recetas exclusivas</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Tu correo electrónico" required>
+                        <button type="submit">Suscribirse</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Any Yogurt. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Carrito de Compras</h3>
+                <span class="close" onclick="toggleCart()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items"></div>
+                <div class="cart-total">
+                    <strong>Total: $<span id="cart-total">0.00</span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="clearCart()">Vaciar Carrito</button>
+                <button class="btn-primary" onclick="checkout()">Proceder al Pago</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <script src="cart.js"></script>
+</body>
+</html>
