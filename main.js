@@ -11,6 +11,7 @@ function initializeApp() {
     setupNewsletterForm();
     setupScrollAnimations();
     updateCartDisplay();
+    updateFooterYear();
 }
 
 // Navigation functionality
@@ -389,6 +390,14 @@ function updateCartDisplay() {
     if (cartCount) {
         cartCount.textContent = totalItems;
         cartCount.style.display = totalItems > 0 ? 'flex' : 'none';
+    }
+}
+
+// Update footer year
+function updateFooterYear() {
+    const yearSpan = document.getElementById('current-year');
+    if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
     }
 }
 
