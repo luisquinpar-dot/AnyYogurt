@@ -256,7 +256,8 @@ p {
     animation: fadeInRight 1s ease 0.3s both;
 }
 
-.hero-image img {
+.hero-image img,
+.hero-image video {
     width: 100%;
     height: 500px;
     object-fit: cover;
