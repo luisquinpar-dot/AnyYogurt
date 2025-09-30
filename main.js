@@ -72,7 +72,7 @@ const productsData = [
         name: 'Yogurt Natural Clásico',
         description: 'Nuestro Yogurt Natural Clásico es la base de todo lo que hacemos. Es simple, pero extraordinario. Elaborado artesanalmente con leche fresca de la más alta calidad y cultivos naturales vivos, sin aditivos, conservantes ni azúcares añadidos.',
         image: 'imagen/Natural.png',
-        badge: 'Más Popular',
+        badge: '100% Natural',
         nutrition: {
             calorias: '120',
             proteinas: '8g',
@@ -90,7 +90,7 @@ const productsData = [
         name: 'Yogurt con Fresa',
         description: 'Deliciosa combinación de nuestro yogurt base, cremoso y delicioso, con trozos reales de fresa fresca. Sin colorantes ni saborizantes artificiales. Es un placer refrescante que evoca la sensación de un postre casero. Perfecto para cualquier momento del día.',
         image: 'imagen/Fresa.png',
-        badge: 'Frutal',
+        badge: 'Artesanal',
         nutrition: {
             calorias: '135',
             proteinas: '7g',
@@ -108,7 +108,7 @@ const productsData = [
         name: 'Yogurt con Piña',
         description: 'Una explosión de frescura cítrica y dulce. Elaborado con nuestro yogurt natural y trozos de piña madura que aportan una textura jugosa y un sabor revitalizante. Ideal si buscas algo ligero, digestivo y con un toque exótico.',
         image: 'imagen/Piña.png',
-        badge: 'Premium',
+        badge: 'Desayuno',
         nutrition: {
             calorias: '128',
             proteinas: '6g',
@@ -126,7 +126,7 @@ const productsData = [
         name: 'Yogurt de Piña Coco',
         description: 'El paraíso tropical en un tazón. La acidez de la piña se fusiona perfectamente con la cremosidad y dulzura del coco. Un sabor rico y aromático, que evoca la playa, ideal para una experiencia indulgente y texturizada.',
         image: 'imagen/Coco piña.png',
-        badge: 'Antioxidante',
+        badge: 'frutal',
         nutrition: {
             calorias: '145',
             proteinas: '6g',
@@ -144,7 +144,7 @@ const productsData = [
         name: 'Yogurt con Durazno',
         description: 'Saborea la dulzura del verano. Este sabor es pura suavidad y aroma, con duraznos maduros que confieren una dulzura delicada y una textura carnosa. Una elección tierna, natural y versátil que agrada a todos.',
         image: 'imagen/Durazno.png',
-        badge: 'Alto en Proteína',
+        badge: 'Mas Popular',
         nutrition: {
             calorias: '130',
             proteinas: '7g',
@@ -162,7 +162,7 @@ const productsData = [
         name: 'Yogurt de Oreo',
         description: 'El capricho que te mereces. Combinamos nuestro yogurt cremoso con trozos generosos de galletas Oreo. Es un sabor indulgente, crujiente y dulce, que convierte el yogurt en un postre instantáneo.',
         image: 'imagen/Oreo.png',
-        badge: 'Desayuno',
+        badge: 'premium',
         nutrition: {
             calorias: '115',
             proteinas: '4g',

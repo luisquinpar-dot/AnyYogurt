@@ -580,6 +580,10 @@ section {
     object-fit: cover;
 }
 
+.blog-post .smoothie-img {
+    object-position: top;
+}
+
 .blog-content {
     padding: calc(var(--spacing) * 3);
 }
@@ -827,16 +831,17 @@ section {
 .newsletter-form button:hover {
     background: var(--accent-color);
 }
-
+ 
 .footer-bottom {
     text-align: center;
     padding-top: calc(var(--spacing) * 4);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    color:  #000000;
 }
 
 .footer-bottom p {
-    color: rgba(255, 255, 255, 0.6);
     margin-bottom: 0;
+    color:  #000000;
 }
 
 /* Animations */
